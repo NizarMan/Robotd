@@ -1,0 +1,15 @@
+{
+    "developerGuild": "Your GuildID",
+    "activityInterval": 5,
+    "token": "MTAzNDA3NDI4ODkxNzA2MTY0Mg.GmEzSx.DWwGQtH9AucfW-EQ-CDavkdlmtYD3QoWVexeYQ",
+    "prefix": "$",
+    "database": "mongodb+srv://TOGOMORY:VqUfESrBQMrpvdgC@cluster0.7oda3rr.mongodb.net/test",
+    "emoji": {
+        "play": "▶️",
+        "stop": "⏹️",
+        "queue": "📄",
+        "success": "☑️",
+        "repeat": "🔁",
+        "error": "❌"
+      }
+}
