@@ -55,20 +55,6 @@ client.on('ready', () => {
 
 
 
-const { ButtonPaginator } = require('corion.js')
-const { EmbedBuilder, ButtonBuilder, ButtonStyle } = require('discord.js')
-client.on('messageCreate', async TOBZi => {
-    if(TOBZi.content.startsWith(prefix + 'help')) {
-        const Page1 = new EmbedBuilder() .setDescription('Page 1')
-        const Page2 = new EmbedBuilder() .setDescription('Page 2')
-        const Page3 = new EmbedBuilder() .setDescription('Page 3')
-        const Page4 = new EmbedBuilder() .setDescription('Page 4')
-        const Page5 = new EmbedBuilder() .setDescription('Page 5')
-        const Back  = new Discord.ButtonBuilder() .setStyle(ButtonStyle.Danger)  .setEmoji('◀')
-        const Next  = new Discord.ButtonBuilder() .setStyle(ButtonStyle.Success) .setEmoji('▶')
-        await ButtonPaginator(TOBZi, [Page1, Page2, Page3, Page4, Page5], [Back, Next])
-    }
-})
 
 client.on('guildMemberRemove', async Member => {
     let ChannelLog = await Member.guild.channels.cache.find(Channel => Channel.id === '1034088795722747964')
