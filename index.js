@@ -68,43 +68,6 @@ client.on('guildMemberRemove', async Member => {
     ChannelLog.send({ embeds: [Embed] })
 })
 
-client.on('messageCreate', async message => {
-    if(message.content === prefix + 'server') {
-        let Embed = new EmbedBuilder()
-        .setColor('E50000')
-        .setAuthor({ name: `${message.guild.name} Information`, iconURL: message.guild.iconURL({ dynamic: true, size: 1024, format: 'png' }) })
-        .setThumbnail(message.guild.iconURL({ dynamic: true, size: 1024, format: 'png' }))
-        .setFields(
-            { name: 'owner server', value: 
-            `**<@${message.guild.ownerId}>**`},
-
-
-            { name: 'owner id', value: 
-            `**${message.guild.ownerId}**`},
-
-
-            { name: 'created on', value: 
-        `**${message.guild.createdAt.toLocaleString()}**`},
-
-
-            { name: 'channels', value: 
-            `**${message.guild.channels.cache.size}**`},
-
-
-            { name: 'roles', value: 
-            `**${message.guild.roles.cache.size}**`},
-
-
-            { name: 'members', value:
-                `**${message.guild.memberCount}**`},
-        )
-            .setImage(`${message.guild.iconURL({ dynamic: true, size: 512, format: 'png'})}`)//لا تلعب رقم
-            
-           .setFooter({ text: `Requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
-
-        message.reply({embeds: [Embed] })
-    }
-})
 
 client.on('guildMemberRemove', async Member => {
     let ChannelLog = await Member.guild.channels.cache.find(Channel => Channel.id === '1005802980467036211')
