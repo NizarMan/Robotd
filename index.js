@@ -43,7 +43,7 @@ process.on('unhandledRejection', e => {
 
 
 
-client.login(token).then(() => {
+client.login(process.env.token).then(() => {
     loadEvents(client);
     loadCommands(client);
     loadSlashCommands(client);
