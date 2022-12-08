@@ -1,7 +1,7 @@
 {
     "developerGuild": "Your GuildID",
     "activityInterval": 5,
-    "token": "MTAzNDA3NDI4ODkxNzA2MTY0Mg.GmEzSx.DWwGQtH9AucfW-EQ-CDavkdlmtYD3QoWVexeYQ",
+    "token": "tokenhete",
     "prefix": "$",
     "database": "mongodb+srv://TOGOMORY:VqUfESrBQMrpvdgC@cluster0.7oda3rr.mongodb.net/test",
     "emoji": {
